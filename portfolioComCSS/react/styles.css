@@ -10,7 +10,7 @@ body {
 header {
     background: rgba(255, 255, 255, 0.9);
     color: #333;
-    padding: 2rem 0;
+    padding: 32px 0;
     text-align: center;
     position: sticky;
     top: 0;
@@ -22,8 +22,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 16px;
+    margin-bottom: 16px;
 }
 
 .header-content img {
@@ -35,18 +35,18 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 40px;
     margin: 0;
     font-weight: 700;
 }
 
 nav {
-    margin-top: 1rem;
+    margin-top: 16px;
 }
 
 nav a {
     color: #1d1d1f;
-    margin: 0 1rem;
+    margin: 0 16px;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
@@ -56,32 +56,31 @@ nav a:hover {
     color: #fbc2eb;
 }
 
-/* Container */
 .container {
     width: 80%;
     max-width: 1200px;
-    margin: 4rem auto;
-    padding: 2rem;
+    margin: 64px auto;
+    padding: 32px;
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 section {
-    margin-bottom: 4rem;
+    margin-bottom: 64px;
 }
 
 section h2 {
-    font-size: 2rem;
+    font-size: 32px;
     color: #1d1d1f;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     border-bottom: 2px solid #fbc2eb;
-    padding-bottom: 0.5rem;
+    padding-bottom: 8px;
 }
 
 .card {
     background-color: #fff;
-    padding: 1.5rem;
+    padding: 24px;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -92,9 +91,10 @@ section h2 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-section p, ul {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
+section p,
+ul {
+    font-size: 17.6px;
+    margin-bottom: 24px;
 }
 
 ul {
@@ -103,13 +103,13 @@ ul {
     margin: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    gap: 16px;
 }
 
 ul li {
     background-color: #fff;
-    padding: 1rem;
-    margin-bottom: 0.5rem;
+    padding: 16px;
+    margin-bottom: 8px;
     border-radius: 8px;
     text-align: center;
     transition: transform 0.3s, background-color 0.3s;
@@ -123,7 +123,7 @@ ul li:hover {
 
 footer {
     text-align: center;
-    padding: 1rem 0;
+    padding: 16px 0;
     background: rgba(255, 255, 255, 0.9);
     color: #1d1d1f;
     position: relative;
@@ -133,6 +133,5 @@ footer {
 
 footer p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 14.4px;
 }
-
