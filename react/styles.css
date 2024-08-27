@@ -1,5 +1,6 @@
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;    color: #333;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
     margin: 0;
     padding: 0;
     background: linear-gradient(140deg, #a8c0ff 0%, #fbc2eb 100%);
@@ -63,6 +64,32 @@ nav a:hover {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32px;
+}
+
+#about,
+#education,
+#languages,
+#awards {
+    grid-column: span 1;
+}
+
+#courses {
+    grid-column: span 2;
+}
+
+#skills,
+#programming {
+    grid-column: 1 / 2;
+}
+
+#programming {
+    grid-column: 2 / 3;
 }
 
 section {
@@ -152,4 +179,3 @@ footer p {
     height: 100%;
     object-fit: cover;
 }
-
