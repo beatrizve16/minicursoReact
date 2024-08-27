@@ -179,3 +179,20 @@ footer p {
     height: 100%;
     object-fit: cover;
 }
+.programming-item {
+    position: relative;
+    width: 100px; 
+    height: 100px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.programming-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.programming-item:hover {
+    transform: translateY(-5px); 
+}
