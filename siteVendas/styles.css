@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Yellowtail&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #A48885;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.headerTitle{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 77px ;
+}
+.tituloCursiva{
+    font-family: "Yellowtail", cursive;
+}
+
+.header-content {
+display: flex;
+align-items: center;
+font-family: "Titillium Web", sans-serif;
+font-weight: 500;
+font-style: normal;
+    color: #fff;
+width: 100%;
+}
+
+.header-content img.logo {
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+ 
+    cursor: pointer;
+}
+
+.header-content h1 {
+    margin: 0;
+    cursor: pointer;
+    color: white;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 500;
+    align-items: center;
+}
+
+.header-content nav a {
+   
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+main {
+    padding: 2rem;
+}
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    
+}
+
+.landing h1 {
+    font-size: 500%;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+    color: #A48885;
+    position: absolute;
+    margin-top: 45px;
+}
+
+.landing h3 {
+    font-size: 500%;
+    font-family: "Yellowtail", cursive;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    color: #D8C5C6;
+
+}
+
+.landing p {
+    font-size: 1.25rem;
+    margin: 0.5rem 0 2rem 0;
+    color: #A48885;
+    font-family: "Titillium Web", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 20px;
+
+}
+
+.landing img.welcome-image {
+    max-width: 100%;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    margin-top: 30px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.btn {
+    display: inline-block;
+    padding: 20px 30px;
+    background-color: #A48885;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 40px;
+    text-align: center;
+}
