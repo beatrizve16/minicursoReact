@@ -175,7 +175,7 @@ header {
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
-    margin-right: 77px;
+    margin-right: 130px;
 }
 
 .header-content {
@@ -209,17 +209,25 @@ header {
     font-weight: bold;
 }
 
+a {
+    text-decoration: none;
+}
+
+.headerTitle a {
+    text-decoration: none;
+}
+
 main.cart {
     padding: 32px;
     text-align: center;
 }
 
 main.cart h1 {
-    font-size: 64px;
+   /* font-size: 64px;
     font-family: "Rowdies", sans-serif;
     font-weight: 700;
     margin-bottom: 32px;
-    color: #A48885;
+    color: #A48885;*/
 }
 
 .cart-items {
@@ -247,6 +255,21 @@ main.cart h1 {
     font-weight: 500;
 }
 
+#yourNormal{
+    font-size: 64px;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: #A48885;
+}
+
+#cartCursiva{
+    font-size: 500%;
+    font-family: "Yellowtail", cursive;
+    font-weight: 300;
+    color: #A48885;
+}
+
 /*parte dos livrossss :D*/
 
 .books {
@@ -255,7 +278,7 @@ main.cart h1 {
 }
 
 .books h1 {
-    font-size: 48px;
+    font-size: 64px;
     font-family: "Rowdies", sans-serif;
     font-weight: 700;
     margin-bottom: 16px;
@@ -288,23 +311,27 @@ main.cart h1 {
 
 .book-container {
     width: 200px;
-    height: 370px;
+    height: 400px;
     overflow: hidden;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .book-container img {
     width: 100%;
     height: 275px;
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 8px;
     margin-top: 10px;
-    text-align: center;
-    width: 180px;
 }
 
 
@@ -313,17 +340,15 @@ main.cart h1 {
     color: #A48885;
     font-family: "Titillium Web", sans-serif;
     font-weight: 500;
-}
-
-.book-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
     text-align: center;
-    margin-bottom: 50px;
-
 }
+
+.book-container:hover,
+.cart-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
 
 .book-details {
     display: flex;
@@ -343,6 +368,7 @@ main.cart h1 {
     color: #A48885;
     border: none;
     border-radius: 4px;
+    margin-left: 15px;
     
 }
 
