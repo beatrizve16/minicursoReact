@@ -130,7 +130,6 @@ main {
     gap: 20px;
     margin-top: 40px;
 }
-
 .photo-container {
     position: relative;
     width: 200px;
@@ -138,6 +137,12 @@ main {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .photo-container img {
@@ -145,10 +150,24 @@ main {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    transition: opacity 0.3s ease;
 }
 
-.photo-caption:hover {
-    background-color: #A48885;
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(148, 114, 114, 0.6);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo-container:hover .photo-caption {
+    opacity: 1;
 }
 
 
@@ -255,7 +274,7 @@ main.cart h1 {
     font-weight: 500;
 }
 
-#yourNormal{
+#yourNormal {
     font-size: 64px;
     font-family: "Rowdies", sans-serif;
     font-weight: 700;
@@ -263,12 +282,12 @@ main.cart h1 {
     color: #A48885;
 }
 
-#cartCursiva{
-    font-size: 500%;
+#cartCursiva {
     font-family: "Yellowtail", cursive;
     font-weight: 300;
     color: #A48885;
 }
+
 
 /*parte dos livrossss :D*/
 
@@ -375,4 +394,38 @@ main.cart h1 {
 .add-to-cart:hover {
     background-color: #A48885;
     color: #D8C5C6;
+}
+
+.books {
+    text-align: center;
+}
+
+#ourNormal {
+    font-size: 64px;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #A48885;
+}
+
+#booksCursiva {
+    font-family: "Yellowtail", cursive;
+    font-weight: 300;
+    color: #A48885;
+}
+
+
+footer {
+    text-align: center;
+    padding: 16px 0;
+    background: rgba(255, 255, 255, 0.9);
+    color: #1d1d1f;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14.4px;
 }
