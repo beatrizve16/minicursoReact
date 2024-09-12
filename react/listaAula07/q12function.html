@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+function convertetemperatura(temperatura, escolha) {
+    let temperaturaConvertida;
+
+    switch (escolha) {
+        case 'C':
+            temperaturaConvertida = (temperatura * 9/5) + 32;
+            break;
+        case 'F':
+            temperaturaConvertida = (temperatura - 32) * 5/9;
+            break;
+        }
+
+    return temperaturaConvertida;
+}
+
+console.log(convertetemperatura(32, 'F')); // 0 (32°F = 0°C)
+console.log(convertetemperatura(100, 'C')); // 212 (100°C = 212°F)
+
+</script>
+</html>
