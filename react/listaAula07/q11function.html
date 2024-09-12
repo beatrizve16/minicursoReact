@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+function calculadora(num1, num2, operacao) {
+    let resultado;
+
+    switch (operacao) {
+        case "+":
+            resultado = num1 + num2;
+            break;
+        case "-":
+            resultado = num1 - num2;
+            break;
+        case "*":
+            resultado = num1 * num2;
+            break;
+        case "/":
+                resultado = num1 / num2;
+            break;
+        default:
+            return "escolha inválida";
+    }
+
+    return resultado;
+}
+
+console.log(calculadora(2, 3, "+"));  
+
+</script>
+</html>
