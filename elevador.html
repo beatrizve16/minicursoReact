@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semáforo</title>
+    <title>Elevador Simples</title>
     <style>
         #display {
             display: flex;
-            flex-wrap: wrap;
             flex-direction: column;
             align-items: center;
             width: 100px;
@@ -16,15 +15,12 @@
             border-radius: 10px;
             padding: 20px;
             margin: 50px auto;
-            color: white
         }
 
-
-        #elevador{
+        #elevador {
             display: flex;
-            flex-wrap: wrap;
             flex-direction: column;
-            align-items:center;
+            align-items: center;
             justify-content: space-evenly;
             width: 200px;
             height: 400px;
@@ -33,69 +29,80 @@
             padding: 20px;
             margin: 50px auto;
         }
+
         .botoes {
             width: 80px;
             height: 80px;
             border-radius: 50%;
             background-color: #383535;
             margin-bottom: 20px;
-            color: white
-
+            color: white;
         }
 
-        #primeiro{
+        .andar {
             width: 150px;
             height: 80px;
             background-color: #383535;
             margin-bottom: 20px;
-            color: white
-
+            color: white;
         }
 
-        #segundo{
-            width: 150px;
-            height: 80px;
-            background-color: #383535;
-            margin-bottom: 20px;
-            color: white
-
-        }
-
-        #terceiro{
-            width: 150px;
-            height: 80px;
-            background-color: #383535;
-            margin-bottom: 20px;
-            color: white
-
+        .azul {
+            background-color: blue;
         }
     </style>
 </head>
 <body>
     <div id="display">
-        <button id="1" class="botoes"> 1 </button>
-        <button id="2" class="botoes"> 2 </button>
-        <button id="3" class="botoes"> 3 </button>
-       
+        <button id="1" class="botoes">1</button>
+        <button id="2" class="botoes">2</button>
+        <button id="3" class="botoes">3</button>
     </div>
 
     <div id="elevador">
-<div id="primeiro"></div>
-<div id="segundo"></div>
-<div id="terceiro"></div>
-
+        <div id="primeiro" class="andar"></div>
+        <div id="segundo" class="andar"></div>
+        <div id="terceiro" class="andar"></div>
     </div>
 
     <script>
-        let andar = 0;
-        const verde = document.getElementById('1');
-        const amarelo = document.getElementById('2');
-        const vermelho = document.getElementById('3');
-        
-        
-        botao.addEventListener('click', function() {
+        let andarAtual = 1; // O elevador começa no primeiro andar
+        const botoes = document.querySelectorAll('.botoes');
+        const andares = [
+            document.getElementById('primeiro'),
+            document.getElementById('segundo'),
+            document.getElementById('terceiro')
+        ];
 
-});
+        function resetarCores() {
+            andares.forEach(andar => andar.classList.remove('azul'));
+        }
+
+        function subirOuDescer(andarDestino) {
+            if (andarAtual < andarDestino) {
+                for (let i = andarAtual; i <= andarDestino; i++) {
+                    setTimeout(() => {
+                        resetarCores();
+                        andares[i - 1].classList.add('azul');
+                    }, (i - andarAtual) * 500); 
+                }
+            } else {
+                for (let i = andarAtual; i >= andarDestino; i--) {
+                    setTimeout(() => {
+                        resetarCores();
+                        andares[i - 1].classList.add('azul');
+                    }, (andarAtual - i) * 500);
+                }
+            }
+            andarAtual = andarDestino; 
+        }
+
+        botoes.forEach(botao => {
+            botao.addEventListener('click', () => {
+                const destino = parseInt(botao.id);
+                subirOuDescer(destino);
+            });
+        });
     </script>
 </body>
-</html>     
+</html>
