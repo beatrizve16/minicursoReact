@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevador Simples</title>
+    <style>
+        #container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #display, #elevador {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #display {
+            width: 100px;
+            height: 300px;
+            background-color: gray;
+            border-radius: 10px;
+            padding: 20px;
+            margin-right: 50px; 
+        }
+
+        #elevador {
+            width: 200px;
+            height: 400px;
+            background-color: gray;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .botoes {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #383535;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .andar {
+            width: 200px;
+            height: 120px;
+            background-color: #383535;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .azul {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="display">
+            <button id="1" class="botoes">1</button>
+            <button id="2" class="botoes">2</button>
+            <button id="3" class="botoes">3</button>
+        </div>
+
+        <div id="elevador">
+            <div id="primeiro" class="andar"></div>
+            <div id="segundo" class="andar"></div>
+            <div id="terceiro" class="andar"></div>
+        </div>
+    </div>
+
+    <script>
+        let andarAtual = 1;
+        const botoes = document.querySelectorAll('.botoes');
+        const andares = [
+            document.getElementById('primeiro'),
+            document.getElementById('segundo'),
+            document.getElementById('terceiro')
+        ];
+
+        botoes.forEach(botao => {
+            botao.addEventListener('click', () => {
+                const destino = botao.id;
+                console.log(andarAtual);
+                
+                if (destino == 1 && andarAtual == 2) {
+                    andares[1].classList.remove('azul');
+                    andares[0].classList.add('azul');
+                } else if (destino == 1 && andarAtual == 3) {
+                    andares[2].classList.remove('azul');
+                    andares[1].classList.add('azul');
+                    setTimeout(() => {
+                        andares[1].classList.remove('azul');
+                        andares[0].classList.add('azul');
+                    }, 500);
+                } else if (destino == 2 && andarAtual == 1) {
+                    andares[0].classList.remove('azul');
+                    andares[1].classList.add('azul');
+                } else if (destino == 2 && andarAtual == 3) {
+                    andares[2].classList.remove('azul');
+                    andares[1].classList.add('azul');
+                } else if (destino == 3 && andarAtual == 1) {
+                    andares[0].classList.remove('azul');
+                    andares[1].classList.add('azul');
+                    setTimeout(() => {
+                        andares[1].classList.remove('azul');
+                        andares[2].classList.add('azul');
+                    }, 500);
+                } else if (destino == 3 && andarAtual == 2) {
+                    andares[1].classList.remove('azul');
+                    andares[2].classList.add('azul');
+                }
+                
+                andarAtual = destino;
+            });
+        });
+    </script>
+</body>
+</html>
