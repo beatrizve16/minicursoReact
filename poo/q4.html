@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+
+function triangulo(largura,altura){
+    this.largura=largura,
+    this.altura=altura,
+
+    this.area=function(){
+        at=largura*altura,
+        console.log(`A area do triangulo e ${at}`);
+    }
+}
+
+const oi= new triangulo(2,2);
+
+oi.area();
+
+</script>
+</html>

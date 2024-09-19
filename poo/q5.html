@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+
+function contabancaria(titular,saldo){
+    this.titular=titular,
+    this.saldo=saldo,
+
+    this.depositar=function(valor){
+        saldo-=valor;
+        console.log(saldo);
+    }
+
+    this.sacar=function(valor){
+        saldo+=valor;
+        console.log(saldo);
+    }
+}
+
+const oi= new contabancaria("Beatriz",10);
+
+oi.depositar(5);
+oi.sacar(5);
+
+</script>
+</html>
