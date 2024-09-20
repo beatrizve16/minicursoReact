@@ -57,15 +57,15 @@
 <body>
     <div id="container">
         <div id="display">
-            <button id="1" class="botoes">1</button>
-            <button id="2" class="botoes">2</button>
             <button id="3" class="botoes">3</button>
+            <button id="2" class="botoes">2</button>
+            <button id="1" class="botoes">1</button>
         </div>
 
         <div id="elevador">
-            <div id="primeiro" class="andar"></div>
-            <div id="segundo" class="andar"></div>
             <div id="terceiro" class="andar"></div>
+            <div id="segundo" class="andar"></div>
+            <div id="primeiro" class="andar"></div>
         </div>
     </div>
 
@@ -73,16 +73,16 @@
         let andarAtual = 1;
         const botoes = document.querySelectorAll('.botoes');
         const andares = [
-            document.getElementById('primeiro'),
+            document.getElementById('terceiro'),
             document.getElementById('segundo'),
-            document.getElementById('terceiro')
+            document.getElementById('primeiro')
         ];
 
         botoes.forEach(botao => {
             botao.addEventListener('click', () => {
                 const destino = botao.id;
                 console.log(andarAtual);
-                if(destino==1 && andarAtual ==1){
+                if(destino==1 && andarAtual==1){
                     andares[0].classList.add('azul');
                 }
                 if (destino == 1 && andarAtual == 2) {
