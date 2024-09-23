@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pessoa Example</title>
+</head>
+<body>
+    <script>
+        function Pessoa(nome, idade, endereco) {
+            this.nome = nome;
+            this.idade = idade;
+            this.endereco = endereco;
+
+            this.imprimir = function() {
+                console.log(`Meu nome é ${this.nome}, tenho ${this.idade} anos e meu endereço é: ${this.endereco.rua}, ${this.endereco.numero}, ${this.endereco.cidade}, ${this.endereco.estado}.`);
+            };
+        }
+
+        const endereco = {
+            rua: "212",
+            numero: "K",
+            cidade: "Brasilia",
+            estado: "DF"
+        };
+
+        const pessoa1 = new Pessoa("Beatriz", 18, endereco);
+        pessoa1.imprimir();
+    </script>
+</body>
+</html>

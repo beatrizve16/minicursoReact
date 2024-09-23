@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Primos</title>
+</head>
+<body>
+</body>
+
+<script>
+    function primoos(num) {
+        if (num <= 1) 
+            return false;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) 
+                return false;
+        }
+        return true;
+    }
+
+    function primoss(limites) {
+        const min = limites[0];
+        const max = limites[1];
+        const primos = [];
+
+        for (let i = min; i <= max; i++) {
+            if (primoos(i)) {
+                primos.push(i);
+            }
+        }
+        return primos;
+    }
+
+    let limites = [10, 40];
+    let primos = primoss(limites);
+    console.log(`Números primos entre ${limites[0]} e ${limites[1]}:`, primos);
+</script>
+</html>

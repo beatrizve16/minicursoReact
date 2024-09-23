@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética</title>
+</head>
+<body>
+    <h1>Média Aritmética dos Elementos</h1>
+</body>
+
+<script>
+    function calcularMedia(numeros) {
+        if (numeros.length === 0) {
+            return 0; 
+        }
+
+        let soma = 0;
+        for (let i = 0; i < numeros.length; i++) {
+            soma += numeros[i];
+        }
+        return soma / numeros.length;
+    }
+
+    let nums = [2, 5, 8, 3, 10, 4, 7, 1, 6, 9];
+    let media = calcularMedia(nums);
+    console.log(`A média é: ${media}`);
+</script>
+</html>
