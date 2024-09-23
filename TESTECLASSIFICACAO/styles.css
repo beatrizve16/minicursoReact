@@ -1,0 +1,10 @@
+.team-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.team-points {
+    font-weight: bold;
+}
