@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Classificação do Brasileirão</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tabela de Classificação do Brasileirão</h1>
+    
+    <div class="inputs">
+        <select id="times">
+            <option value="">Escolha um time</option>
+            <option value="Bota Fogo">Bota Fogo</option>
+            <option value="Palmeiras">Palmeiras</option>
+            <option value="Fortaleza">Fortaleza</option>
+            <option value="Flamengo">Flamengo</option>
+            <option value="São Paulo">São Paulo</option>
+            <option value="Bahia">Bahia</option>
+            <option value="Cruzeiro">Cruzeiro</option>
+            <option value="Internacional">Internacional</option>
+            <option value="Atletico MG">Atletico MG</option>
+            <option value="Vasco da Gama">Vasco da Gama</option>
+        </select>
+    
+        <select id="resultado">
+            <option value="">Escolha o resultado</option>
+            <option value="ganhou">Ganhou</option>
+            <option value="perdeu">Perdeu</option>
+            <option value="empate">Empatou</option>
+        </select>
+
+        <button id="atualizar">Atualizar pontos</button>
+    </div>
+
+    <div id="tabela"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
