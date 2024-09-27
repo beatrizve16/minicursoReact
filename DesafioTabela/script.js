@@ -12,6 +12,7 @@ const equipes = [
     { nome: "Vasco da Gama", pontos: 0 }
 ];
 
+
 // Função para atualizar a pontuação
 function atualizarPontos(equipe, resultado) {
     if (resultado === 'ganhou') {
