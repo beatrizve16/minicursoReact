@@ -1,0 +1,38 @@
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:start;
+    
+}
+
+#confirm {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0f4655;
+    color: white;
+    border-radius: 5px;
+    
+    
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width:800px; 
+    text-align: center;
+
+}
+
+h2{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
